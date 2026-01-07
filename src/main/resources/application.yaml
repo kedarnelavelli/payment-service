@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: payment-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  profiles:
+    active: local
+
+authorize-net:
+  api-login-id: ${AUTHORIZE_NET_LOGIN_ID}
+  transaction-key: ${AUTHORIZE_NET_TRANSACTION_KEY}
+  sandbox: true
+
+jwt:
+  secret: VGhpcy1pcy1hLXZlcnktbG9uZy1qd3Qtc2VjcmV0LWtleS0xMjM0NTY=
+  expiration-ms: 3600000

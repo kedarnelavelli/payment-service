@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/paymentdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: paymentuser
+    password: paymentpass
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
